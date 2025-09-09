@@ -1,0 +1,12 @@
+[gd_resource type="Resource" load_steps=3 format=3 uid="uid://d4lvd3cweeinp"]
+
+[ext_resource type="Script" uid="uid://dipkkvo8lod18" path="res://Scripts/EnemyType.gd" id="1_n7sol"]
+[ext_resource type="Texture2D" uid="uid://b6xmiu7aphsu" path="res://Assets/Slug.png" id="2_blis7"]
+
+[resource]
+script = ExtResource("1_n7sol")
+title = "Eye"
+texture = ExtResource("2_blis7")
+health = 0.0
+damage = 0.0
+metadata/_custom_type_script = "uid://dipkkvo8lod18"
