@@ -4,13 +4,14 @@ extends Node2D
 @export var enemy : PackedScene
 
 var distance : float = 400
+var can_spawn : bool = true
 
 @export var enemy_types : Array[Enemy]
 
 var minute : int:
 	set(value):
 		minute = value
-		$HBoxContainer/Minute.text = str(value)
+		$CanvasLayer/HBoxContainer/Minute.text = str(value)
 
 var _second : int:
 	set(value):
@@ -18,10 +19,19 @@ var _second : int:
 		if _second >= 10:
 			_second -= 1
 			minute += 1
-		$HBoxContainer/Second.text = str(_second).lpad(2, '0')
+		$CanvasLayer/HBoxContainer/Second.text = str(_second).lpad(2, '0')
+
+func _physics_process(_delta):
+	if get_tree().get_node_count_in_group("Enemy") < 700:
+		can_spawn = true
+	else:
+		can_spawn = false
 
 
 func spawn(pos : Vector2, elite : bool = false):
+	if not can_spawn and not elite:
+		return
+	
 	var enemy_instance = enemy.instantiate()
 	
 	enemy_instance.type = enemy_types[min(minute, enemy_types.size()-1)]

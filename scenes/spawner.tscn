@@ -12,19 +12,23 @@ script = ExtResource("1_ik2nu")
 enemy = ExtResource("2_tx2ig")
 enemy_types = Array[ExtResource("3_4wbs5")]([ExtResource("4_30a77"), ExtResource("5_p5s3f"), ExtResource("6_e3f8v")])
 
-[node name="HBoxContainer" type="HBoxContainer" parent="."]
-offset_right = 40.0
-offset_bottom = 40.0
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
 
-[node name="Minute" type="Label" parent="HBoxContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer"]
+offset_left = 19.0
+offset_top = 8.0
+offset_right = 61.0
+offset_bottom = 48.0
+
+[node name="Minute" type="Label" parent="CanvasLayer/HBoxContainer"]
 layout_mode = 2
 text = "0"
 
-[node name="Label2" type="Label" parent="HBoxContainer"]
+[node name="Label2" type="Label" parent="CanvasLayer/HBoxContainer"]
 layout_mode = 2
 text = ":"
 
-[node name="Second" type="Label" parent="HBoxContainer"]
+[node name="Second" type="Label" parent="CanvasLayer/HBoxContainer"]
 layout_mode = 2
 text = "00"
 
