@@ -1,4 +1,4 @@
-[gd_resource type="Resource" load_steps=3 format=3 uid="uid://dcdjeylmgu20f"]
+[gd_resource type="Resource" script_class="Enemy" load_steps=3 format=3 uid="uid://dcdjeylmgu20f"]
 
 [ext_resource type="Script" uid="uid://dipkkvo8lod18" path="res://Scripts/EnemyType.gd" id="1_m7x3o"]
 [ext_resource type="Texture2D" uid="uid://2txi2wurqmwv" path="res://Assets/Titan.png" id="2_yhhmw"]
@@ -8,5 +8,5 @@ script = ExtResource("1_m7x3o")
 title = "Titan"
 texture = ExtResource("2_yhhmw")
 health = 0.0
-damage = 0.0
+damage = 3.0
 metadata/_custom_type_script = "uid://dipkkvo8lod18"

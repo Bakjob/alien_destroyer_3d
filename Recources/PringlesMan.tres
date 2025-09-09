@@ -1,12 +1,12 @@
-[gd_resource type="Resource" load_steps=3 format=3 uid="uid://hjkij3roocva"]
+[gd_resource type="Resource" script_class="Enemy" load_steps=3 format=3 uid="uid://hjkij3roocva"]
 
-[ext_resource type="Script" uid="uid://dipkkvo8lod18" path="res://Scripts/EnemyType.gd" id="1_uky1m"]
-[ext_resource type="Texture2D" uid="uid://ct4o4hvs1gi60" path="res://Assets/Pringles man.png" id="2_diilp"]
+[ext_resource type="Script" uid="uid://dipkkvo8lod18" path="res://Scripts/EnemyType.gd" id="1_qumbe"]
+[ext_resource type="Texture2D" uid="uid://ct4o4hvs1gi60" path="res://Assets/Pringles man.png" id="2_258u8"]
 
 [resource]
-script = ExtResource("1_uky1m")
+script = ExtResource("1_qumbe")
 title = "Pringlesman"
-texture = ExtResource("2_diilp")
+texture = ExtResource("2_258u8")
 health = 0.0
-damage = 0.0
+damage = 1.0
 metadata/_custom_type_script = "uid://dipkkvo8lod18"
