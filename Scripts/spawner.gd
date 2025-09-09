@@ -21,12 +21,13 @@ var _second : int:
 		$HBoxContainer/Second.text = str(_second).lpad(2, '0')
 
 
-func spawn(pos : Vector2):
+func spawn(pos : Vector2, elite : bool = false):
 	var enemy_instance = enemy.instantiate()
 	
 	enemy_instance.type = enemy_types[min(minute, enemy_types.size()-1)]
 	enemy_instance.position = pos
 	enemy_instance.player_reference = player
+	enemy_instance.elite = elite
 	
 	get_tree().current_scene.add_child(enemy_instance)
 	
@@ -47,3 +48,7 @@ func _on_timer_timeout() -> void:
 func _on_pattern_timeout() -> void:
 	for i in range(75):
 		spawn(get_random_position())
+
+
+func _on_elite_timeout() -> void:
+	spawn(get_random_position(), true)

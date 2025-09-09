@@ -4,6 +4,11 @@ extends CharacterBody2D
 var direction : Vector2
 var speed : float = 75
 var damage : float
+var elite : bool = false:
+	set(value):
+		elite = value 
+		if value: $Sprite2D.material = load("res://Shaders/rainbow.tres")
+		scale = Vector2(1.5,1.5)
 
 
 var type : Enemy:
