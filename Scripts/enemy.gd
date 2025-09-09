@@ -19,5 +19,10 @@ var type : Enemy:
 
 
 func _physics_process(delta):
+	var separation = (player_reference.position - position).length()
+	if separation >= 500 and not elite:
+		queue_free()
+	
+	
 	velocity = (player_reference.position - position).normalized() * speed
 	move_and_collide(velocity * delta)
