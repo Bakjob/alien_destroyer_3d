@@ -42,3 +42,8 @@ func amount(number : int = 1):
 func _on_timer_timeout() -> void:
 	_second += 1
 	amount(_second % 10)
+
+
+func _on_pattern_timeout() -> void:
+	for i in range(75):
+		spawn(get_random_position())
