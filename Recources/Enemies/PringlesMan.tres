@@ -1,6 +1,8 @@
-[gd_resource type="Resource" script_class="Enemy" load_steps=3 format=3 uid="uid://hjkij3roocva"]
+[gd_resource type="Resource" script_class="Enemy" load_steps=5 format=3 uid="uid://hjkij3roocva"]
 
+[ext_resource type="Script" uid="uid://cokq0usmu8jua" path="res://Scripts/PickupResource.gd" id="1_o0ke6"]
 [ext_resource type="Script" uid="uid://dipkkvo8lod18" path="res://Scripts/EnemyType.gd" id="1_qumbe"]
+[ext_resource type="Resource" uid="uid://b7n28vhmstghb" path="res://Recources/Pickups/Blue_Gem.tres" id="2_3gvmc"]
 [ext_resource type="Texture2D" uid="uid://ct4o4hvs1gi60" path="res://Assets/Enemy/Pringles man.png" id="2_258u8"]
 
 [resource]
@@ -9,4 +11,5 @@ title = "Pringlesman"
 texture = ExtResource("2_258u8")
 health = 1.0
 damage = 1.0
+drops = Array[ExtResource("1_o0ke6")]([ExtResource("2_3gvmc")])
 metadata/_custom_type_script = "uid://dipkkvo8lod18"

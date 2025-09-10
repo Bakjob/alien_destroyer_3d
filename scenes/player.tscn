@@ -82,7 +82,7 @@ show_percentage = false
 autostart = true
 
 [node name="Camera2D" type="Camera2D" parent="."]
-zoom = Vector2(1.5, 1.5)
+zoom = Vector2(1.7, 1.7)
 
 [node name="Magnet" type="Area2D" parent="."]
 collision_layer = 0

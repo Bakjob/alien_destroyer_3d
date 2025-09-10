@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Gem" load_steps=3 format=3 uid="uid://bedif5rvy0acl"]
+
+[ext_resource type="Texture2D" uid="uid://bc082dlkktius" path="res://Assets/Gems/Gem_Green.png" id="1_bq5v1"]
+[ext_resource type="Script" uid="uid://bx523dgk6gflb" path="res://Scripts/Gem.gd" id="2_wdc4r"]
+
+[resource]
+script = ExtResource("2_wdc4r")
+XP = 2.0
+title = "Green Gem"
+icon = ExtResource("1_bq5v1")
+description = "Gains experience."
+metadata/_custom_type_script = "uid://bx523dgk6gflb"
