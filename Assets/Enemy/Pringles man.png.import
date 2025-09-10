@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://2txi2wurqmwv"
-path="res://.godot/imported/Titan.png-e96848402ded6dcc0838803facab9b72.ctex"
+uid="uid://ct4o4hvs1gi60"
+path="res://.godot/imported/Pringles man.png-4e17406b18f55b88cc041ca4fd917047.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Titan.png"
-dest_files=["res://.godot/imported/Titan.png-e96848402ded6dcc0838803facab9b72.ctex"]
+source_file="res://Assets/Enemy/Pringles man.png"
+dest_files=["res://.godot/imported/Pringles man.png-4e17406b18f55b88cc041ca4fd917047.ctex"]
 
 [params]
 

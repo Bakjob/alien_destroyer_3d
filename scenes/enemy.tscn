@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://c3wekyolwh88i"]
 
 [ext_resource type="Script" uid="uid://cd18v1hntp4n" path="res://Scripts/enemy.gd" id="1_7p1mj"]
-[ext_resource type="Texture2D" uid="uid://ct4o4hvs1gi60" path="res://Assets/Pringles man.png" id="2_md0e3"]
+[ext_resource type="Texture2D" uid="uid://ct4o4hvs1gi60" path="res://Assets/Enemy/Pringles man.png" id="2_md0e3"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_4ra3w"]
 radius = 28.0
