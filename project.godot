@@ -33,7 +33,8 @@ project/assembly_name="Alien_Destroyer_3D"
 
 folder_colors={
 "res://Assets/Enemy/": "red",
-"res://Recources/Enemies/": "red"
+"res://Recources/Enemies/": "red",
+"res://Recources/Pickups/": "green"
 }
 
 [input]

@@ -58,3 +58,8 @@ func check_XP():
 	if XP > %XP.max_value:
 		XP -= %XP.max_value
 		level += 1
+
+
+func _on_magnet_area_entered(area: Area2D) -> void:
+	if area.has_method("follow"):
+		area.follow(self)

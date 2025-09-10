@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://cwevegvja3a3n"]
+[gd_scene load_steps=11 format=3 uid="uid://cwevegvja3a3n"]
 
 [ext_resource type="Script" uid="uid://jxg303xpwoq1" path="res://Scripts/player.gd" id="1_4flbx"]
 [ext_resource type="PackedScene" uid="uid://bqdsl8j0wxswn" path="res://scenes/slot.tscn" id="2_qhqgy"]
@@ -11,6 +11,9 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_i3pqv"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3vyb7"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_fjrip"]
+radius = 50.0
 
 [node name="Player" type="CharacterBody2D"]
 script = ExtResource("1_4flbx")
@@ -82,6 +85,13 @@ autostart = true
 zoom = Vector2(1.5, 1.5)
 
 [node name="Magnet" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Magnet"]
+position = Vector2(-1, 0)
+shape = SubResource("CircleShape2D_fjrip")
 
 [connection signal="body_entered" from="SelfDamage" to="." method="_on_self_damage_body_entered"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="area_entered" from="Magnet" to="." method="_on_magnet_area_entered"]
