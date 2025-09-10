@@ -16,8 +16,8 @@ var minute : int:
 var _second : int:
 	set(value):
 		_second = value
-		if _second >= 10:
-			_second -= 1
+		if _second >= 60:
+			_second -= 59
 			minute += 1
 		$CanvasLayer/HBoxContainer/Second.text = str(_second).lpad(2, '0')
 

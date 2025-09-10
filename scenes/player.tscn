@@ -1,11 +1,12 @@
-[gd_scene load_steps=7 format=3 uid="uid://cwevegvja3a3n"]
+[gd_scene load_steps=10 format=3 uid="uid://cwevegvja3a3n"]
 
 [ext_resource type="Script" uid="uid://jxg303xpwoq1" path="res://Scripts/player.gd" id="1_4flbx"]
 [ext_resource type="PackedScene" uid="uid://bqdsl8j0wxswn" path="res://scenes/slot.tscn" id="2_qhqgy"]
 [ext_resource type="Resource" uid="uid://baf1gn1i162h" path="res://Recources/Weapons/Magic_wand.tres" id="3_dqkch"]
-
-[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_onrkg"]
-size = Vector2(20, 20)
+[ext_resource type="Texture2D" uid="uid://cbe1drs0whdkg" path="res://Assets/Player/enemy_roboot.png" id="4_dqkch"]
+[ext_resource type="Texture2D" uid="uid://bxkna4uycbubv" path="res://Assets/Icons/XP_Under.png" id="4_fjrip"]
+[ext_resource type="Texture2D" uid="uid://dg2rolsw5ktdf" path="res://Assets/Icons/XP_Over.png" id="5_smehm"]
+[ext_resource type="Texture2D" uid="uid://c512ffl2618hr" path="res://Assets/Icons/XP_Progress.png" id="6_ur7pv"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_i3pqv"]
 
@@ -17,10 +18,10 @@ script = ExtResource("1_4flbx")
 [node name="UI" type="CanvasLayer" parent="."]
 
 [node name="Weapons" type="HBoxContainer" parent="UI"]
-offset_left = 1.0
-offset_top = 1.0
-offset_right = 41.0
-offset_bottom = 41.0
+offset_left = 26.0
+offset_top = 24.0
+offset_right = 154.0
+offset_bottom = 64.0
 
 [node name="Slot" parent="UI/Weapons" instance=ExtResource("2_qhqgy")]
 layout_mode = 2
@@ -32,8 +33,26 @@ layout_mode = 2
 [node name="Slot3" parent="UI/Weapons" instance=ExtResource("2_qhqgy")]
 layout_mode = 2
 
+[node name="XP" type="TextureProgressBar" parent="UI"]
+unique_name_in_owner = true
+offset_right = 40.0
+offset_bottom = 40.0
+max_value = 10.0
+texture_under = ExtResource("4_fjrip")
+texture_over = ExtResource("5_smehm")
+texture_progress = ExtResource("6_ur7pv")
+
+[node name="Level" type="Label" parent="UI/XP"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 341.0
+offset_top = 2.0
+offset_right = 381.0
+offset_bottom = 25.0
+text = "Lv 1"
+
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = SubResource("PlaceholderTexture2D_onrkg")
+texture = ExtResource("4_dqkch")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_i3pqv")
@@ -61,6 +80,8 @@ autostart = true
 
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(1.5, 1.5)
+
+[node name="Magnet" type="Area2D" parent="."]
 
 [connection signal="body_entered" from="SelfDamage" to="." method="_on_self_damage_body_entered"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
